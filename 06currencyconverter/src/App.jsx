@@ -58,6 +58,16 @@ function App() {
                 Swap
               </button>
             </div>
+            <div className="w-full mb-1">
+              <InputBox
+                label="to"
+                amount={convertedAmount}
+                amountDisabled
+                currencyOptions={options}
+                onCurrencyChange={(currency) => setTo(currency)}
+                selectedCurrency={to}
+              />
+            </div>
           </form>
         </div>
       </div>
