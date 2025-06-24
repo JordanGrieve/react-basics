@@ -6,7 +6,7 @@ import { InputBox } from "./components/index.js";
 function App() {
   const [amount, setAmount] = useState(0);
   const [from, setFrom] = useState("usd");
-  const [to, setTo] = useState("gbp");
+  const [to, setTo] = useState("inr");
   const [convertedAmount, setConvertedAmount] = useState(0);
 
   const currencyInfo = useCurrencyInfo(from);
@@ -21,7 +21,7 @@ function App() {
     setFrom(to);
     setTo(from);
     setConvertedAmount(amount);
-    SetAmount(convertedAmount);
+    setAmount(convertedAmount);
   };
 
   return (
@@ -35,7 +35,7 @@ function App() {
       <div className="w-full">
         <div className="w-full max-w-md mx-auto border border-gray-60 rounded-lg p-5 backdrop-blur-sm bg-white/30">
           <form
-            onSubmit={() => {
+            onSubmit={(e) => {
               e.preventDefault();
               convert();
             }}
@@ -68,6 +68,12 @@ function App() {
                 selectedCurrency={to}
               />
             </div>
+            <button
+              type="submit"
+              className="w-full bg-blue-600 text-white px-4 py-3 rounded-lg"
+            >
+              Convert {from} to {to}
+            </button>
           </form>
         </div>
       </div>
