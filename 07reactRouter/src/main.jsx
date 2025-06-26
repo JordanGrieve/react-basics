@@ -23,6 +23,7 @@ const router = createBrowserRouter(
       <Route path="user/" element={<User />}>
         <Route path=":userid" element={<User />} />
       </Route>
+      <Route path="github" element={<h1>Github</h1>} />
     </Route>
   )
 );
