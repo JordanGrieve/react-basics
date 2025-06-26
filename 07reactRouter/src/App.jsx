@@ -4,7 +4,9 @@ import "./App.css";
 function App() {
   return (
     <>
-      <h1 className="text-red-500 p-5 py-2 rounded">HRWHERER</h1>
+      <h1 className="text-red-500 bg-green-500 p-5 py-2 rounded">
+        React router dom
+      </h1>
     </>
   );
 }
