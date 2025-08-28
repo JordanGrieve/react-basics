@@ -1,5 +1,4 @@
-import React from "react";
-import useTheme from "../contexts/theme";
+import useTheme from "../context/theme";
 
 function ThemeBtn() {
   const { themeMode, lightTheme, darkTheme } = useTheme();
